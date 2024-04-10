@@ -3,55 +3,10 @@ import {Text, TouchableOpacity, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-function HomeScreen({navigation}) {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('ProfileScreen');
-        }}>
-        <Text>Go to Profile</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('LelSelectionScreen');
-        }}>
-        <Text>Go to Lvls Screen</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('RulseScreen');
-        }}>
-        <Text>Go to Rules</Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
-function ProfileScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>ProfileScreen Screen</Text>
-    </View>
-  );
-}
-function LelSelectionScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>LelSelectionScreen Screen</Text>
-    </View>
-  );
-}
-
-function RulseScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>RulseScreen Screen</Text>
-    </View>
-  );
-}
+import HomeScreen from './screens/HomeScreen';
+import RulseScreen from './screens/RulseScreen';
+import LelSelectionScreen from './screens/LelSelectionScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
