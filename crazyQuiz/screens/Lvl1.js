@@ -11,6 +11,7 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import ConfettiCannon from 'react-native-confetti-cannon';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Lvl1 = ({navigation}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -20,6 +21,49 @@ const Lvl1 = ({navigation}) => {
   const [like, setLike] = useState(false);
   const [dislike, setDislike] = useState(false);
   const [confetiState, setConfetiState] = useState(false);
+  const [open2Lvl, setOpen2Lvl] = useState(false);
+  console.log('open2Lvl==>', open2Lvl);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    setData();
+  }, [open2Lvl]);
+
+  const setData = async () => {
+    try {
+      const data = {
+        open2Lvl,
+      };
+      const jsonData = JSON.stringify(data);
+      await AsyncStorage.setItem(`Lvl1`, jsonData);
+      console.log('Дані збережено в AsyncStorage');
+    } catch (e) {
+      console.log('Помилка збереження даних:', e);
+    }
+  };
+
+  const getData = async () => {
+    try {
+      const jsonData = await AsyncStorage.getItem(`Lvl1`);
+      if (jsonData !== null) {
+        const parsedData = JSON.parse(jsonData);
+        console.log('parsedData==>', parsedData);
+        setOpen2Lvl(parsedData.open2Lvl);
+      }
+    } catch (e) {
+      console.log('Помилка отримання даних:', e);
+    }
+  };
+
+  useEffect(() => {
+    if (correctAnswersCount === 5) {
+      setOpen2Lvl(true);
+    }
+  }, [correctAnswersCount]);
+  ///////////////////////////////////
 
   useEffect(() => {
     if (correctAnswersCount === 5) {

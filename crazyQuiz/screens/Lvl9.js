@@ -10,6 +10,7 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import ConfettiCannon from 'react-native-confetti-cannon';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Lvl9 = ({navigation}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -19,6 +20,49 @@ const Lvl9 = ({navigation}) => {
   const [like, setLike] = useState(false);
   const [dislike, setDislike] = useState(false);
   const [confetiState, setConfetiState] = useState(false);
+  const [open10Lvl, setOpen10Lvl] = useState(false);
+  console.log('open10Lvl==>', open10Lvl);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    setData();
+  }, [open10Lvl]);
+
+  const setData = async () => {
+    try {
+      const data = {
+        open10Lvl,
+      };
+      const jsonData = JSON.stringify(data);
+      await AsyncStorage.setItem(`Lvl9`, jsonData);
+      console.log('Дані збережено в AsyncStorage');
+    } catch (e) {
+      console.log('Помилка збереження даних:', e);
+    }
+  };
+
+  const getData = async () => {
+    try {
+      const jsonData = await AsyncStorage.getItem(`Lvl9`);
+      if (jsonData !== null) {
+        const parsedData = JSON.parse(jsonData);
+        console.log('parsedData==>', parsedData);
+        setOpen10Lvl(parsedData.open10Lvl);
+      }
+    } catch (e) {
+      console.log('Помилка отримання даних:', e);
+    }
+  };
+
+  useEffect(() => {
+    if (correctAnswersCount === 5) {
+      setOpen10Lvl(true);
+    }
+  }, [correctAnswersCount]);
+  ///////////////////////////////////
 
   useEffect(() => {
     if (correctAnswersCount === 5) {

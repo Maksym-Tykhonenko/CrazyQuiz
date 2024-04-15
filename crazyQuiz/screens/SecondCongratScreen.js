@@ -35,7 +35,7 @@ const SecondCongratScreen = ({navigation}) => {
             Here you can
           </Text>
           <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 55}}>
-            test your
+            check your
           </Text>
           <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 55}}>
             knowledge
@@ -44,7 +44,7 @@ const SecondCongratScreen = ({navigation}) => {
             in various
           </Text>
           <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 55}}>
-            strange
+            comedy
           </Text>
           <Text
             style={{
@@ -52,7 +52,7 @@ const SecondCongratScreen = ({navigation}) => {
               fontWeight: 'bold',
               fontSize: 55,
             }}>
-            comedy areas
+            situations
           </Text>
         </Animated.View>
 
