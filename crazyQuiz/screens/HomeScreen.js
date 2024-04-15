@@ -1,24 +1,56 @@
-import React from 'react';
-import {View, Text, TouchableOpacity, ImageBackground} from 'react-native';
+import React, {useState, useEffect, useRef} from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ImageBackground,
+  ScrollView,
+  Animated,
+} from 'react-native';
+import ConfettiCannon from 'react-native-confetti-cannon';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const HomeScreen = ({navigation}) => {
+  //////////// LOADER
+  const appearingAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(appearingAnim, {
+      toValue: 1,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
+  }, []);
+
   return (
     <View style={{flex: 1}}>
       <ImageBackground
-        source={require('../assets/bgr1.jpeg')}
+        source={require('../assets/bcgr.jpeg')}
         style={{flex: 1}}>
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Animated.View
+          style={{
+            opacity: appearingAnim,
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
           <TouchableOpacity
             style={{
               width: 250,
               height: 80,
               borderWidth: 3,
-              borderRadius: 20,
+              //borderRadius: 20,
               marginBottom: 20,
               borderColor: '#d8ab45',
-              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              backgroundColor: 'rgba(60,11,103,0.7)',
               alignItems: 'center',
               justifyContent: 'center',
+              shadowColor: '#d8ab45',
+              shadowOffset: {width: 0, height: 8},
+              shadowOpacity: 0.8,
+              shadowRadius: 20,
+              elevation: 10,
             }}
             onPress={() => {
               navigation.navigate('LelSelectionScreen');
@@ -33,12 +65,17 @@ const HomeScreen = ({navigation}) => {
               width: 250,
               height: 80,
               borderWidth: 3,
-              borderRadius: 20,
+              //borderRadius: 20,
               marginBottom: 20,
               borderColor: '#d8ab45',
-              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              backgroundColor: 'rgba(60,11,103,0.7)',
               alignItems: 'center',
               justifyContent: 'center',
+              shadowColor: '#d8ab45',
+              shadowOffset: {width: 0, height: 8},
+              shadowOpacity: 0.8,
+              shadowRadius: 20,
+              elevation: 10,
             }}
             onPress={() => {
               navigation.navigate('RulseScreen');
@@ -53,12 +90,17 @@ const HomeScreen = ({navigation}) => {
               width: 250,
               height: 80,
               borderWidth: 3,
-              borderRadius: 20,
+              //borderRadius: 20,
               marginBottom: 20,
               borderColor: '#d8ab45',
-              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              backgroundColor: 'rgba(60,11,103,0.7)',
               alignItems: 'center',
               justifyContent: 'center',
+              shadowColor: '#d8ab45',
+              shadowOffset: {width: 0, height: 8},
+              shadowOpacity: 0.8,
+              shadowRadius: 20,
+              elevation: 10,
             }}
             onPress={() => {
               navigation.navigate('ProfileScreen');
@@ -67,7 +109,7 @@ const HomeScreen = ({navigation}) => {
               PROFILE
             </Text>
           </TouchableOpacity>
-        </View>
+        </Animated.View>
       </ImageBackground>
     </View>
   );
