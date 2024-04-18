@@ -15,6 +15,7 @@
 		604626F72BC91A84009E83A0 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 604626F62BC91A84009E83A0 /* Fonts */; };
 		7699B88040F8A987B510C191 /* libPods-crazyQuiz-crazyQuizTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-crazyQuiz-crazyQuizTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A1B59F717EAE43AB9D613569 /* Starnberg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2B3211FD2614087B18ECBFA /* Starnberg.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		604626F62BC91A84009E83A0 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = crazyQuiz/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-crazyQuiz-crazyQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crazyQuiz-crazyQuizTests.release.xcconfig"; path = "Target Support Files/Pods-crazyQuiz-crazyQuizTests/Pods-crazyQuiz-crazyQuizTests.release.xcconfig"; sourceTree = "<group>"; };
+		D2B3211FD2614087B18ECBFA /* Starnberg.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Starnberg.ttf; path = ../assets/fonts/Starnberg.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				9727FEFC457A4306857530E3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,6 +141,14 @@
 				00E356EE1AD99517003FC87E /* crazyQuizTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9727FEFC457A4306857530E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2B3211FD2614087B18ECBFA /* Starnberg.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -247,6 +258,7 @@
 				604626F72BC91A84009E83A0 /* Fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A1B59F717EAE43AB9D613569 /* Starnberg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = D84X652PG7;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = crazyQuiz/Info.plist;
@@ -480,7 +492,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -500,7 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = D84X652PG7;
 				INFOPLIST_FILE = crazyQuiz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Crazy Comedy Quiz";
@@ -510,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

@@ -11,6 +11,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useWindowDimensions} from 'react-native';
 
 const Lvl4 = ({navigation}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -22,6 +23,7 @@ const Lvl4 = ({navigation}) => {
   const [confetiState, setConfetiState] = useState(false);
   const [open5Lvl, setOpen5Lvl] = useState(false);
   console.log('open5Lvl==>', open5Lvl);
+  const {height, width} = useWindowDimensions();
 
   useEffect(() => {
     getData();
@@ -131,14 +133,15 @@ const Lvl4 = ({navigation}) => {
     return options.map((option, index) => (
       <TouchableOpacity
         style={{
-          width: 300,
-          marginBottom: 20,
+          width: width * 0.9,
+          marginBottom: 10,
           borderWidth: 3,
-          borderColor: '#d8ab45',
-          backgroundColor: 'rgba(60,11,103,0.7)',
+          borderRadius: 15,
+          borderColor: '#ffd97a',
+          backgroundColor: '#ffd97a',
           alignItems: 'center',
           justifyContent: 'center',
-          shadowColor: '#d8ab45',
+          shadowColor: '#ffd97a',
           shadowOffset: {width: 0, height: 2},
           shadowOpacity: 0.8,
           shadowRadius: 2,
@@ -148,9 +151,9 @@ const Lvl4 = ({navigation}) => {
         <Text
           style={{
             marginVertical: 20,
-            color: '#d8ab45',
+            fontFamily: 'Starnberg',
             fontWeight: 'bold',
-            fontSize: 20,
+            fontSize: 25,
           }}>
           {option}
         </Text>
@@ -172,7 +175,7 @@ const Lvl4 = ({navigation}) => {
   return (
     <View style={{flex: 1, position: 'relative'}}>
       <ImageBackground
-        source={require('../assets/bcgr.jpeg')}
+        source={require('../assets/rediz/newBgr.jpg')}
         style={{flex: 1}}>
         {!levelRaiting ? (
           <Animated.View
@@ -182,21 +185,26 @@ const Lvl4 = ({navigation}) => {
               alignItems: 'center',
               marginTop: 40,
             }}>
-            <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 35}}>
+            <Text
+              style={{
+                color: '#fff',
+                fontFamily: 'Starnberg',
+                fontWeight: 'bold',
+                fontSize: 45,
+              }}>
               LEVEL 4
             </Text>
             {currentQuestionIndex < questions.length && (
               <>
                 <Text
                   style={{
-                    borderWidth: 3,
                     textAlign: 'center',
-                    borderColor: '#d8ab45',
-                    fontSize: 25,
+                    fontFamily: 'Starnberg',
+                    fontSize: 30,
                     fontWeight: 'bold',
-                    color: '#d8ab45',
+                    color: '#fff',
                     marginBottom: 40,
-                    marginTop: 40,
+                    marginTop: 30,
                   }}>
                   {questions[currentQuestionIndex].question}
                 </Text>
@@ -213,40 +221,61 @@ const Lvl4 = ({navigation}) => {
                 position: 'absolute',
                 bottom: 20,
                 right: 20,
-                borderColor: '#d8ab45',
+                borderColor: '#ffd97a',
                 borderWidth: 3,
-                width: 60,
-                height: 60,
+                borderRadius: 15,
+                paddingHorizontal: 15,
+                paddingVertical: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'rgba(60,11,103,0.7)',
+                backgroundColor: '#ffd97a',
                 paddingVertical: 8,
-                shadowColor: '#d8ab45',
+                shadowColor: '#ffd97a',
                 shadowOffset: {width: 0, height: 2},
                 shadowOpacity: 0.8,
                 shadowRadius: 2,
               }}>
-              <FontAwesome
-                name="arrow-left"
-                style={{color: '#d8ab45', fontSize: 30}}
-              />
+              <Text
+                style={{
+                  fontSize: 40,
+                  fontFamily: 'Starnberg',
+                }}>
+                Back
+              </Text>
             </TouchableOpacity>
           </Animated.View>
         ) : (
           <View
             style={{
               flex: 1,
-              //position: 'relative',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 30}}>
+            <Text
+              style={{
+                fontFamily: 'Starnberg',
+                fontWeight: 'bold',
+                fontSize: 30,
+                color: '#fff',
+              }}>
               Congrat!!!
             </Text>
-            <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 30}}>
+            <Text
+              style={{
+                fontFamily: 'Starnberg',
+                fontWeight: 'bold',
+                fontSize: 30,
+                color: '#fff',
+              }}>
               You passed the 4th level!
             </Text>
-            <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 30}}>
+            <Text
+              style={{
+                fontFamily: 'Starnberg',
+                fontWeight: 'bold',
+                fontSize: 30,
+                color: '#fff',
+              }}>
               You like it?
             </Text>
 
@@ -275,10 +304,22 @@ const Lvl4 = ({navigation}) => {
               </TouchableOpacity>
             </View>
 
-            <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 30}}>
+            <Text
+              style={{
+                fontFamily: 'Starnberg',
+                fontWeight: 'bold',
+                fontSize: 30,
+                color: '#fff',
+              }}>
               Tab "NEXT" to move on
             </Text>
-            <Text style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 30}}>
+            <Text
+              style={{
+                fontFamily: 'Starnberg',
+                fontWeight: 'bold',
+                fontSize: 30,
+                color: '#fff',
+              }}>
               next level
             </Text>
 
@@ -287,16 +328,16 @@ const Lvl4 = ({navigation}) => {
                 position: 'absolute',
                 bottom: 20,
                 right: 20,
-                borderColor: '#d8ab45',
+                borderColor: '#ffd97a',
                 borderWidth: 3,
-                width: 120,
-                height: 60,
-                //borderRadius: 15,
+                borderRadius: 15,
+                paddingHorizontal: 15,
+                paddingVertical: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'rgba(60,11,103,0.7)',
+                backgroundColor: '#ffd97a',
                 paddingVertical: 8,
-                shadowColor: '#d8ab45',
+                shadowColor: '#ffd97a',
                 shadowOffset: {width: 0, height: 2},
                 shadowOpacity: 0.8,
                 shadowRadius: 2,
@@ -304,10 +345,7 @@ const Lvl4 = ({navigation}) => {
               onPress={() => {
                 navigation.navigate('Lvl5');
               }}>
-              <Text
-                style={{color: '#d8ab45', fontWeight: 'bold', fontSize: 25}}>
-                NEXT
-              </Text>
+              <Text style={{fontSize: 40, fontFamily: 'Starnberg'}}>NEXT</Text>
             </TouchableOpacity>
             {confetiState && (
               <>

@@ -1,5 +1,5 @@
-import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import React, {useEffect, useRef, useState} from 'react';
+import {Text, TouchableOpacity, View, Animated} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -25,100 +25,158 @@ import WinnerScreen from './screens/WinnerScreen';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  const [louderIsEnded, setLouderIsEnded] = useState(false);
+  //////////// LOADER
+  const appearingAnim = useRef(new Animated.Value(0)).current;
+  const appearingSecondAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(appearingAnim, {
+      toValue: 1,
+      duration: 2000,
+      useNativeDriver: true,
+    }).start();
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      Animated.timing(appearingSecondAnim, {
+        toValue: 1,
+        duration: 2500,
+        useNativeDriver: true,
+      }).start();
+      //setLouderIsEnded(true);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLouderIsEnded(true);
+    }, 4000);
+  }, []);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="FirstCongratScreen"
-          component={FirstCongratScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="SecondCongratScreen"
-          component={SecondCongratScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="FirdCongratScreen"
-          component={FirdCongratScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="ProfileScreen"
-          component={ProfileScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="LelSelectionScreen"
-          component={LelSelectionScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="RulseScreen"
-          component={RulseScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl1"
-          component={Lvl1}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl2"
-          component={Lvl2}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl3"
-          component={Lvl3}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl4"
-          component={Lvl4}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl5"
-          component={Lvl5}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl6"
-          component={Lvl6}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl7"
-          component={Lvl7}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl8"
-          component={Lvl8}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl9"
-          component={Lvl9}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Lvl10"
-          component={Lvl10}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="WinnerScreen"
-          component={WinnerScreen}
-          options={{headerShown: false}}
-        />
-      </Stack.Navigator>
+      {!louderIsEnded ? (
+        <View
+          style={{
+            position: 'relative',
+            flex: 1,
+            //backgroundColor: 'rgba(225, 7, 6, 255)',
+          }}>
+          <Animated.Image
+            source={require('./assets/rediz/loader1.jpg')} // Special animatable View
+            style={{
+              //...props.style,
+              opacity: appearingAnim,
+              height: '100%',
+              position: 'absolute', // Bind opacity to animated value
+            }}
+          />
+          <Animated.Image
+            source={require('./assets/rediz/loader2.jpg')} // Special animatable View
+            style={{
+              //...props.style,
+              opacity: appearingSecondAnim,
+              height: '100%',
+              position: 'absolute', // Bind opacity to animated value
+            }}
+          />
+        </View>
+      ) : (
+        <Stack.Navigator>
+          <Stack.Screen
+            name="FirstCongratScreen"
+            component={FirstCongratScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="SecondCongratScreen"
+            component={SecondCongratScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="FirdCongratScreen"
+            component={FirdCongratScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="LelSelectionScreen"
+            component={LelSelectionScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="RulseScreen"
+            component={RulseScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl1"
+            component={Lvl1}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl2"
+            component={Lvl2}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl3"
+            component={Lvl3}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl4"
+            component={Lvl4}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl5"
+            component={Lvl5}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl6"
+            component={Lvl6}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl7"
+            component={Lvl7}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl8"
+            component={Lvl8}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl9"
+            component={Lvl9}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Lvl10"
+            component={Lvl10}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="WinnerScreen"
+            component={WinnerScreen}
+            options={{headerShown: false}}
+          />
+        </Stack.Navigator>
+      )}
     </NavigationContainer>
   );
 };

@@ -157,7 +157,7 @@ const LelSelectionScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, position: 'relative'}}>
       <ImageBackground
-        source={require('../assets/bcgr.jpeg')}
+        source={require('../assets/rediz/newBgr.jpg')}
         style={{flex: 1}}>
         <View
           style={{
@@ -166,300 +166,333 @@ const LelSelectionScreen = ({navigation}) => {
             justifyContent: 'center',
           }}>
           <SafeAreaView>
-            <ScrollView style={{marginTop: 20}}>
-              <Animated.View style={{opacity: appearingAnim}}>
-                <TouchableOpacity
-                  onPress={() => {
-                    navigation.navigate('Lvl1');
-                  }}
-                  style={{
-                    marginBottom: 20,
-                    borderColor: '#d8ab45',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
-                  }}>
-                  <Text
-                    style={{
-                      color: '#d8ab45',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    First Level
-                  </Text>
-                </TouchableOpacity>
+            <View style={{alignItems: 'center', marginBottom: 40}}>
+              <Text
+                style={{color: '#fff', fontFamily: 'Starnberg', fontSize: 70}}>
+                Levels
+              </Text>
+            </View>
 
-                <TouchableOpacity
-                  disabled={!open2Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl2');
-                  }}
+            <Animated.View
+              style={{
+                opacity: appearingAnim,
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginLeft: 20,
+              }}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Lvl1');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: '#ffd97a',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open2Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open2Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Second Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open3Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl3');
-                  }}
+                  1
+                </Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                disabled={!open2Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl2');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open2Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open3Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open2Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open3Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Third Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open4Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl4');
-                  }}
+                  2
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open3Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl3');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open3Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open4Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open3Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open4Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Fourth Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open5Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl5');
-                  }}
+                  3
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open4Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl4');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open4Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open5Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open4Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open5Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Fifth Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open6Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl6');
-                  }}
+                  4
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open5Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl5');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open5Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open6Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open5Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open6Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Sixth Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open7Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl7');
-                  }}
+                  5
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open6Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl6');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open6Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open7Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open6Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open7Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Seventh Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open8Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl8');
-                  }}
+                  6
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open7Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl7');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open7Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open8Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open7Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open8Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Eighth Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open9Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl9');
-                  }}
+                  7
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open8Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl8');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open8Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open9Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open8Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open9Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Ninth Level
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  disabled={!open10Lvl ? true : false}
-                  onPress={() => {
-                    navigation.navigate('Lvl10');
-                  }}
+                  8
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open9Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl9');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open9Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
                   style={{
-                    marginBottom: 20,
-                    borderColor: open10Lvl ? '#d8ab45' : '#e2e7e3',
-                    borderWidth: 3,
-                    width: 300,
-                    height: 60,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
-                    paddingVertical: 8,
-                    shadowColor: '#d8ab45',
-                    shadowOffset: {width: 0, height: 2},
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    color: open9Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
                   }}>
-                  <Text
-                    style={{
-                      color: open10Lvl ? '#d8ab45' : '#e2e7e3',
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    }}>
-                    Tenth Level
-                  </Text>
-                </TouchableOpacity>
-              </Animated.View>
-            </ScrollView>
+                  9
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                disabled={!open10Lvl ? true : false}
+                onPress={() => {
+                  navigation.navigate('Lvl10');
+                }}
+                style={{
+                  marginBottom: 20,
+                  borderColor: open10Lvl ? '#ffd97a' : 'grey',
+                  borderWidth: 3,
+                  borderRadius: 15,
+                  width: 80,
+                  height: 80,
+                  marginRight: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  backgroundColor: '#ffd97a',
+                  paddingVertical: 8,
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 2},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 2,
+                }}>
+                <Text
+                  style={{
+                    color: open10Lvl ? '#000' : 'grey',
+                    fontSize: 40,
+                    fontFamily: 'Starnberg',
+                  }}>
+                  10
+                </Text>
+              </TouchableOpacity>
+            </Animated.View>
           </SafeAreaView>
 
           {/**BTN BACK */}
@@ -471,27 +504,27 @@ const LelSelectionScreen = ({navigation}) => {
               position: 'absolute',
               bottom: 20,
               right: 20,
-              borderColor: '#d8ab45',
+              borderColor: '#ffd97a',
               borderWidth: 3,
-              width: 60,
-              height: 60,
-              //borderRadius: 15,
+              borderRadius: 15,
+              paddingHorizontal: 15,
+              paddingVertical: 5,
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'rgba(60,11,103,0.7)',
+              backgroundColor: '#ffd97a',
               paddingVertical: 8,
-              shadowColor: '#d8ab45',
+              shadowColor: '#ffd97a',
               shadowOffset: {width: 0, height: 2},
               shadowOpacity: 0.8,
               shadowRadius: 2,
             }}>
-            <FontAwesome
-              name="arrow-left"
+            <Text
               style={{
-                color: '#d8ab45',
-                fontSize: 30,
-              }}
-            />
+                fontSize: 40,
+                fontFamily: 'Starnberg',
+              }}>
+              Back
+            </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>

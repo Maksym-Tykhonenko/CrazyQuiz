@@ -25,7 +25,7 @@ const RulseScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, position: 'relative'}}>
       <ImageBackground
-        source={require('../assets/bcgr.jpeg')}
+        source={require('../assets/rediz/newBgr.jpg')}
         style={{flex: 1}}>
         <View
           style={{
@@ -36,27 +36,31 @@ const RulseScreen = ({navigation}) => {
             <Animated.View style={{opacity: appearingAnim}}>
               <Text
                 style={{
-                  color: '#d8ab45',
                   fontWeight: 'bold',
-                  fontSize: 28,
+                  fontSize: 35,
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   marginBottom: 20,
+                  textAlign: 'center',
                 }}>
                 Rules for "Crazy Comedy Quiz":
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 1. The game has 10 levels, each of which contains 5 questions.{' '}
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 {' '}
@@ -64,18 +68,20 @@ const RulseScreen = ({navigation}) => {
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 3. Initially, only the first level is available to the player.
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 {' '}
@@ -84,9 +90,10 @@ const RulseScreen = ({navigation}) => {
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 5. The player needs to choose the correct answer for each
@@ -94,9 +101,10 @@ const RulseScreen = ({navigation}) => {
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 {' '}
@@ -105,9 +113,10 @@ const RulseScreen = ({navigation}) => {
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 7. After successfully completing all 5 questions in a level, the
@@ -115,18 +124,20 @@ const RulseScreen = ({navigation}) => {
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 8. The cycle repeats until reaching the last, tenth level.{' '}
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 9. Successful completion of all 10 levels is considered game
@@ -134,14 +145,16 @@ const RulseScreen = ({navigation}) => {
               </Text>
               <Text
                 style={{
-                  color: '#d8ab45',
+                  fontFamily: 'Starnberg',
+                  color: '#fff',
                   fontWeight: 'bold',
-                  fontSize: 22,
+                  fontSize: 26,
                   marginBottom: 15,
                 }}>
                 10. The main purpose of the game is to have fun and enjoy
                 humorous questions and answers.
               </Text>
+              <View style={{height: 100}}></View>
             </Animated.View>
           </ScrollView>
 
@@ -156,25 +169,26 @@ const RulseScreen = ({navigation}) => {
               right: 20,
               borderColor: '#d8ab45',
               borderWidth: 3,
-              width: 60,
-              height: 60,
-              //borderRadius: 15,
+              borderRadius: 15,
+              paddingHorizontal: 15,
+              paddingVertical: 5,
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'rgba(60,11,103,0.7)',
+              backgroundColor: '#ffd97a',
               paddingVertical: 8,
               shadowColor: '#d8ab45',
               shadowOffset: {width: 0, height: 2},
               shadowOpacity: 0.8,
               shadowRadius: 2,
             }}>
-            <FontAwesome
-              name="arrow-left"
+            <Text
               style={{
-                color: '#d8ab45',
-                fontSize: 30,
-              }}
-            />
+                //color: '#d8ab45',
+                fontSize: 40,
+                fontFamily: 'Starnberg',
+              }}>
+              Back
+            </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>

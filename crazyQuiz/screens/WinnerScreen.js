@@ -12,16 +12,14 @@ const WinnerScreen = ({navigation}) => {
             justifyContent: 'center',
             textAlign: 'center',
           }}>
-          <Text style={{color: 'red', fontWeight: 'bold', fontSize: 40}}>
+          <Text style={{fontSize: 47, fontFamily: 'Starnberg'}}>
             CONGRAT!!!
           </Text>
-          <Text style={{color: 'red', fontWeight: 'bold', fontSize: 40}}>
-            you won
-          </Text>
-          <Text style={{color: 'red', fontWeight: 'bold', fontSize: 40}}>
+          <Text style={{fontSize: 47, fontFamily: 'Starnberg'}}>you won</Text>
+          <Text style={{fontSize: 47, fontFamily: 'Starnberg'}}>
             Click 'OK' if you
           </Text>
-          <Text style={{color: 'red', fontWeight: 'bold', fontSize: 40}}>
+          <Text style={{fontSize: 47, fontFamily: 'Starnberg'}}>
             want to play again
           </Text>
           <TouchableOpacity
@@ -32,19 +30,18 @@ const WinnerScreen = ({navigation}) => {
               marginTop: 100,
               width: 300,
               borderWidth: 3,
-              borderColor: 'red',
-              backgroundColor: 'rgba(255, 255, 255, 0.3)',
+              borderRadius: 15,
+              borderColor: '#ffd97a',
+              backgroundColor: '#ffd97a',
               alignItems: 'center',
               justifyContent: 'center',
               paddingVertical: 15,
-              shadowColor: '#d8ab45',
+              shadowColor: '#ffd97a',
               shadowOffset: {width: 0, height: 2},
               shadowOpacity: 0.8,
               shadowRadius: 2,
             }}>
-            <Text style={{color: 'red', fontWeight: 'bold', fontSize: 25}}>
-              OK
-            </Text>
+            <Text style={{fontSize: 40, fontFamily: 'Starnberg'}}>OK</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>

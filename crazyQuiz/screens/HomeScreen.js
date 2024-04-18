@@ -26,7 +26,7 @@ const HomeScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <ImageBackground
-        source={require('../assets/bcgr.jpeg')}
+        source={require('../assets/rediz/newBgr.jpg')}
         style={{flex: 1}}>
         <Animated.View
           style={{
@@ -39,14 +39,12 @@ const HomeScreen = ({navigation}) => {
             style={{
               width: 250,
               height: 80,
-              borderWidth: 3,
-              //borderRadius: 20,
+              borderRadius: 15,
               marginBottom: 20,
-              borderColor: '#d8ab45',
-              backgroundColor: 'rgba(60,11,103,0.7)',
+              backgroundColor: '#ffd97a',
               alignItems: 'center',
               justifyContent: 'center',
-              shadowColor: '#d8ab45',
+              shadowColor: '#ffd97a',
               shadowOffset: {width: 0, height: 8},
               shadowOpacity: 0.8,
               shadowRadius: 20,
@@ -55,7 +53,11 @@ const HomeScreen = ({navigation}) => {
             onPress={() => {
               navigation.navigate('LelSelectionScreen');
             }}>
-            <Text style={{color: '#d8ab45', fontSize: 30, fontWeight: 'bold'}}>
+            <Text
+              style={{
+                fontSize: 40,
+                fontFamily: 'Starnberg',
+              }}>
               PLAY
             </Text>
           </TouchableOpacity>
@@ -64,14 +66,12 @@ const HomeScreen = ({navigation}) => {
             style={{
               width: 250,
               height: 80,
-              borderWidth: 3,
-              //borderRadius: 20,
+              borderRadius: 15,
               marginBottom: 20,
-              borderColor: '#d8ab45',
-              backgroundColor: 'rgba(60,11,103,0.7)',
+              backgroundColor: '#ffd97a',
               alignItems: 'center',
               justifyContent: 'center',
-              shadowColor: '#d8ab45',
+              shadowColor: '#ffd97a',
               shadowOffset: {width: 0, height: 8},
               shadowOpacity: 0.8,
               shadowRadius: 20,
@@ -80,23 +80,19 @@ const HomeScreen = ({navigation}) => {
             onPress={() => {
               navigation.navigate('RulseScreen');
             }}>
-            <Text style={{color: '#d8ab45', fontSize: 30, fontWeight: 'bold'}}>
-              RULES
-            </Text>
+            <Text style={{fontSize: 40, fontFamily: 'Starnberg'}}>RULES</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={{
               width: 250,
               height: 80,
-              borderWidth: 3,
-              //borderRadius: 20,
+              borderRadius: 15,
               marginBottom: 20,
-              borderColor: '#d8ab45',
-              backgroundColor: 'rgba(60,11,103,0.7)',
+              backgroundColor: '#ffd97a',
               alignItems: 'center',
               justifyContent: 'center',
-              shadowColor: '#d8ab45',
+              shadowColor: '#ffd97a',
               shadowOffset: {width: 0, height: 8},
               shadowOpacity: 0.8,
               shadowRadius: 20,
@@ -105,9 +101,7 @@ const HomeScreen = ({navigation}) => {
             onPress={() => {
               navigation.navigate('ProfileScreen');
             }}>
-            <Text style={{color: '#d8ab45', fontSize: 30, fontWeight: 'bold'}}>
-              PROFILE
-            </Text>
+            <Text style={{fontSize: 40, fontFamily: 'Starnberg'}}>PROFILE</Text>
           </TouchableOpacity>
         </Animated.View>
       </ImageBackground>

@@ -108,10 +108,45 @@ const ProfileScreen = ({navigation, onPress}) => {
     }).start();
   }, []);
 
+  {
+    /**<TouchableOpacity
+                onPress={() => {
+                  AvatartPicker();
+                }}
+                style={{
+                  width: 300,
+                  height: 300,
+                  borderWidth: 5,
+                  borderRadius: 150,
+                  borderColor: '#ffd97a',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  shadowColor: '#ffd97a',
+                  shadowOffset: {width: 0, height: 18},
+                  shadowOpacity: 0.8,
+                  shadowRadius: 10,
+                  elevation: 10,
+                }}>
+                <Text
+                  style={{
+                    color: '#ffd97a',
+                    fontSize: 40,
+                    fontWeight: 'bold',
+                    shadowColor: '#ffd97a',
+                    shadowOffset: {width: 0, height: 18},
+                    shadowOpacity: 0.8,
+                    shadowRadius: 30,
+                    elevation: 10,
+                  }}>
+                  Press Me!
+                </Text>
+              </TouchableOpacity> */
+  }
+
   return (
     <View style={{flex: 1, position: 'relative'}}>
       <ImageBackground
-        source={require('../assets/bcgr.jpeg')}
+        source={require('../assets/rediz/newBgr.jpg')}
         style={{flex: 1}}>
         <Animated.View
           style={{
@@ -122,29 +157,23 @@ const ProfileScreen = ({navigation, onPress}) => {
           <View style={{marginTop: 50}}>
             {!avatar ? (
               <TouchableOpacity
+                style={{position: 'relative'}}
                 onPress={() => {
                   AvatartPicker();
-                }}
-                style={{
-                  width: 300,
-                  height: 300,
-                  borderWidth: 5,
-                  borderRadius: 150,
-                  borderColor: '#d8ab45',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  shadowColor: '#d8ab45',
-                  shadowOffset: {width: 0, height: 18},
-                  shadowOpacity: 0.8,
-                  shadowRadius: 10,
-                  elevation: 10,
                 }}>
+                <Image
+                  style={{width: 300, height: 300}}
+                  source={require('../assets/rediz/btn_bg.png')}
+                />
                 <Text
                   style={{
-                    color: '#d8ab45',
+                    position: 'absolute',
+                    top: '40%',
+                    left: '20%',
                     fontSize: 40,
                     fontWeight: 'bold',
-                    shadowColor: '#d8ab45',
+                    fontFamily: 'Starnberg',
+                    shadowColor: '#ffd97a',
                     shadowOffset: {width: 0, height: 18},
                     shadowOpacity: 0.8,
                     shadowRadius: 30,
@@ -154,29 +183,35 @@ const ProfileScreen = ({navigation, onPress}) => {
                 </Text>
               </TouchableOpacity>
             ) : (
-              <Image
-                source={{uri: avatar}}
-                style={{
-                  width: 300,
-                  height: 300,
-                  borderWidth: 5,
-                  borderRadius: 150,
-                  borderColor: '#d8ab45',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  shadowColor: '#d8ab45',
-                  shadowOffset: {width: 0, height: 18},
-                  shadowOpacity: 0.8,
-                  shadowRadius: 30,
-                }}
-              />
+              <TouchableOpacity
+                style={{position: 'relative'}}
+                onPress={() => {
+                  AvatartPicker();
+                }}>
+                <Image
+                  source={{uri: avatar}}
+                  style={{
+                    width: 300,
+                    height: 300,
+                    borderWidth: 5,
+                    borderRadius: 150,
+                    borderColor: '#ffd97a',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    shadowColor: '#ffd97a',
+                    shadowOffset: {width: 0, height: 18},
+                    shadowOpacity: 0.8,
+                    shadowRadius: 30,
+                  }}
+                />
+              </TouchableOpacity>
             )}
           </View>
           <ScrollView>
             {!name ? (
               <View style={{marginTop: 20, alignItems: 'center'}}>
                 <TextInput
-                  placeholderTextColor="#d8ab45"
+                  placeholderTextColor="#ffd97a"
                   placeholder="Enter your name..."
                   value={onChangeName}
                   onChangeText={setOnChangeName}
@@ -188,12 +223,13 @@ const ProfileScreen = ({navigation, onPress}) => {
                     marginBottom: 15,
                     paddingLeft: 10,
                     fontSize: 20,
+                    borderRadius: 15,
                     borderWidth: 3,
-                    borderColor: '#d8ab45',
-                    color: '#d8ab45',
+                    borderColor: '#ffd97a',
+                    color: '#ffd97a',
                     backgroundColor: 'rgba(60,11,103,0.7)',
-                    width: 280,
-                    height: 60,
+                    width: 350,
+                    height: 70,
                   }}
                 />
                 <TouchableOpacity
@@ -201,20 +237,21 @@ const ProfileScreen = ({navigation, onPress}) => {
                     handleSeveName();
                   }}
                   style={{
-                    width: 100,
-                    height: 60,
+                    width: 350,
+                    height: 70,
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderColor: '#d8ab45',
+                    borderColor: '#ffd97a',
                     borderWidth: 3,
-                    backgroundColor: 'rgba(60,11,103,0.7)',
+                    borderRadius: 15,
+                    backgroundColor: '#ffd97a',
                   }}>
                   <Text
                     style={{
-                      color: '#d8ab45',
-                      fontSize: 20,
+                      fontSize: 40,
                       fontWeight: 'bold',
-                      shadowColor: '#d8ab45',
+                      fontFamily: 'Starnberg',
+                      shadowColor: '#ffd97a',
                       shadowOffset: {width: 0, height: 18},
                       shadowOpacity: 0.8,
                       shadowRadius: 30,
@@ -228,10 +265,10 @@ const ProfileScreen = ({navigation, onPress}) => {
               <View style={{marginTop: 20, alignItems: 'center'}}>
                 <Text
                   style={{
-                    color: '#d8ab45',
-                    fontSize: 40,
+                    fontFamily: 'Starnberg',
+                    fontSize: 50,
                     fontWeight: 'bold',
-                    shadowColor: '#d8ab45',
+                    shadowColor: '#ffd97a',
                     shadowOffset: {width: 0, height: 18},
                     shadowOpacity: 0.8,
                     shadowRadius: 30,
@@ -250,21 +287,23 @@ const ProfileScreen = ({navigation, onPress}) => {
                 }}
                 style={{
                   height: 60,
+                  width: 350,
                   borderWidth: 3,
-                  borderColor: '#d8ab45',
-                  backgroundColor: 'rgba(60,11,103,0.7)',
+                  borderRadius: 15,
+                  borderColor: '#ffd97a',
+                  backgroundColor: '#ffd97a',
                   alignItems: 'center',
                   justifyContent: 'center',
                   paddingHorizontal: 10,
-                  shadowColor: '#d8ab45',
+                  shadowColor: '#ffd97a',
                   shadowOffset: {width: 0, height: 10},
                   shadowOpacity: 0.7,
                   shadowRadius: 10,
                 }}>
                 <Text
                   style={{
-                    color: '#d8ab45',
-                    fontSize: 35,
+                    fontSize: 30,
+                    fontFamily: 'Starnberg',
                   }}>
                   Tab to enter the result
                 </Text>
@@ -275,25 +314,26 @@ const ProfileScreen = ({navigation, onPress}) => {
                   return (
                     <View
                       style={{
+                        width: 350,
                         marginTop: 10,
                         paddingHorizontal: 5,
                         borderWidth: 3,
-                        borderColor: '#d8ab45',
-                        backgroundColor: 'rgba(60,11,103,0.7)',
+                        borderRadius: 15,
+                        borderColor: '#ffd97a',
+                        backgroundColor: '#ffd97a',
+                        paddingVertical: 7,
                       }}
                       key={uid()}>
                       <Text
                         style={{
-                          color: '#d8ab45',
-
+                          fontFamily: 'Starnberg',
                           fontSize: 25,
                         }}>
                         Data: {e.data}
                       </Text>
                       <Text
                         style={{
-                          color: '#d8ab45',
-
+                          fontFamily: 'Starnberg',
                           fontSize: 25,
                         }}>
                         Levels complited: {e.score}
@@ -311,14 +351,15 @@ const ProfileScreen = ({navigation, onPress}) => {
                 position: 'relative',
                 alignItems: 'center',
                 paddingTop: 40,
-                backgroundColor: 'rgba(60,11,103, 0.9)',
+                backgroundColor: 'rgba(225,7,6,255)',
                 flex: 1,
                 marginRight: '5%',
                 marginLeft: '5%',
                 marginTop: '35%',
                 marginBottom: '35%',
                 borderWidth: 5,
-                borderColor: '#d8ab45',
+                borderRadius: 15,
+                borderColor: '#ffd97a',
               }}>
               <TouchableOpacity
                 onPress={() => {
@@ -330,12 +371,13 @@ const ProfileScreen = ({navigation, onPress}) => {
                   right: 10,
                   marginTop: 15,
                   borderWidth: 3,
-                  borderColor: '#d8ab45',
-                  backgroundColor: 'rgba(60,11,103,0.7)',
+                  borderRadius: 15,
+                  borderColor: '#ffd97a',
+                  backgroundColor: '#ffd97a',
                   alignItems: 'center',
                   justifyContent: 'center',
                   paddingHorizontal: 10,
-                  shadowColor: '#d8ab45',
+                  shadowColor: '#ffd97a',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 20,
@@ -345,11 +387,10 @@ const ProfileScreen = ({navigation, onPress}) => {
                 <Text
                   style={{
                     fontSize: 40,
-                    color: '#d8ab45',
-                    shadowColor: '#d8ab45',
                     shadowOffset: {width: 0, height: 18},
                     shadowOpacity: 0.9,
                     shadowRadius: 20,
+                    fontFamily: 'Starnberg',
                   }}>
                   X
                 </Text>
@@ -359,10 +400,11 @@ const ProfileScreen = ({navigation, onPress}) => {
                 style={{marginTop: 50}}
                 showsVerticalScrollIndicator={false}>
                 <TextInput
-                  placeholderTextColor="#d8ab45"
-                  placeholder="Enter your time..."
+                  placeholderTextColor="#ffd97a"
+                  placeholder="Enter levels complited..."
                   value={scoreTime}
                   onChangeText={setScoreTime}
+                  keyboardType="numeric"
                   style={{
                     shadowOffset: {width: 3, height: 4},
                     shadowOpacity: 0.8,
@@ -372,12 +414,13 @@ const ProfileScreen = ({navigation, onPress}) => {
                     paddingLeft: 10,
                     fontSize: 20,
                     borderWidth: 3,
-                    borderColor: '#d8ab45',
-                    color: '#d8ab45',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
+                    borderColor: '#ffd97a',
+                    color: '#ffd97a',
+                    backgroundColor: 'rgba(225,7,6,255)',
                     borderRadius: 15,
                     width: 280,
                     height: 60,
+                    fontFamily: 'Starnberg',
                   }}
                 />
 
@@ -402,12 +445,14 @@ const ProfileScreen = ({navigation, onPress}) => {
                   style={{
                     marginTop: 15,
                     borderWidth: 3,
-                    borderColor: '#d8ab45',
-                    backgroundColor: 'rgba(60,11,103,0.7)',
+                    borderRadius: 15,
+                    borderColor: '#ffd97a',
+                    backgroundColor: '#ffd97a',
                     alignItems: 'center',
                     justifyContent: 'center',
                     paddingHorizontal: 10,
-                    shadowColor: '#d8ab45',
+                    height: 60,
+                    shadowColor: '#ffd97a',
                     shadowOffset: {width: 0, height: 18},
                     shadowOpacity: 0.9,
                     shadowRadius: 20,
@@ -415,9 +460,8 @@ const ProfileScreen = ({navigation, onPress}) => {
                   <Text
                     style={{
                       fontSize: 40,
-
-                      color: '#d8ab45',
-                      shadowColor: '#d8ab45',
+                      fontFamily: 'Starnberg',
+                      shadowColor: '#ffd97a',
                       shadowOffset: {width: 0, height: 18},
                       shadowOpacity: 0.9,
                       shadowRadius: 20,
@@ -442,25 +486,25 @@ const ProfileScreen = ({navigation, onPress}) => {
             right: 20,
             borderColor: '#d8ab45',
             borderWidth: 3,
-            width: 60,
-            height: 60,
-            //borderRadius: 15,
+            borderRadius: 15,
+            paddingHorizontal: 15,
+            paddingVertical: 5,
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: 'rgba(60,11,103,0.7)',
+            backgroundColor: '#ffd97a',
             paddingVertical: 8,
-            shadowColor: '#d8ab45',
+            shadowColor: '#ffd97a',
             shadowOffset: {width: 0, height: 2},
             shadowOpacity: 0.8,
             shadowRadius: 2,
           }}>
-          <FontAwesome
-            name="arrow-left"
+          <Text
             style={{
-              color: '#d8ab45',
-              fontSize: 30,
-            }}
-          />
+              fontSize: 40,
+              fontFamily: 'Starnberg',
+            }}>
+            Back
+          </Text>
         </TouchableOpacity>
       </ImageBackground>
     </View>
