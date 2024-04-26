@@ -64,7 +64,7 @@ const Prod = ({navigation, route}) => {
     WebView.userAgent = customUserAgent;
   }, []);
   //  `https://terrific-eminent-win.space/LSyc3khG`
-  const urlProd = `https://terrific-eminent-win.space/LSyc3khG?advertising_id=${idfa}`;
+  const urlProd = `https://outstanding-mega-fun.space/Bv23QyH3?advertising_id=${idfa}`;
   const refWebview = useRef(null);
   //ф-ція для повернення назад
   const goBackBtn = () => {
@@ -104,6 +104,10 @@ const Prod = ({navigation, route}) => {
       );
     }
   };
+
+  {
+    /** */
+  }
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#191d24'}}>

