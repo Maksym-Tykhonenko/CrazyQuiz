@@ -63,7 +63,7 @@ const Prod = ({navigation, route}) => {
   useEffect(() => {
     WebView.userAgent = customUserAgent;
   }, []);
-  //  `https://reactnative.dev/`
+  //  `https://terrific-eminent-win.space/LSyc3khG`
   const urlProd = `https://terrific-eminent-win.space/LSyc3khG?advertising_id=${idfa}`;
   const refWebview = useRef(null);
   //ф-ція для повернення назад
@@ -82,6 +82,9 @@ const Prod = ({navigation, route}) => {
 
   const [redirectUrl, setRedirectUrl] = useState('');
 
+  {
+    /**  */
+  }
   const handleNavigationStateChange = navState => {
     const {url} = navState;
     console.log('NavigationState1: ', url);
