@@ -64,7 +64,7 @@ const Prod = ({navigation, route}) => {
     WebView.userAgent = customUserAgent;
   }, []);
   //  `https://terrific-eminent-win.space/LSyc3khG`
-  const urlProd = `https://outstanding-mega-fun.space/Bv23QyH3?advertising_id=${idfa}`;
+  const urlProd = `https://impressive-eminent-satisfaction.space/GX84G2DS?advertising_id=${idfa}`;
   const refWebview = useRef(null);
   //ф-ція для повернення назад
   const goBackBtn = () => {
@@ -94,13 +94,13 @@ const Prod = ({navigation, route}) => {
       )
     ) {
       setRedirectUrl(
-        `https://terrific-eminent-win.space/LSyc3khG?advertising_id=${idfa}`,
+        `https://impressive-eminent-satisfaction.space/GX84G2DS?advertising_id=${idfa}`,
       );
     } else if (
       url.includes('https://interac.express-connect.com/cpi?transaction=')
     ) {
       setRedirectUrl(
-        `https://terrific-eminent-win.space/LSyc3khG?advertising_id=${idfa}`,
+        `https://impressive-eminent-satisfaction.space/GX84G2DS?advertising_id=${idfa}`,
       );
     }
   };
